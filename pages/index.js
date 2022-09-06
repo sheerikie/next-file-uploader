@@ -1,7 +1,9 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import React, { Fragment, useState } from 'react';
 import Message from './Message'
 import Progress from './Progress'
 import axios from 'axios';
+
 
 export default function Home() {
   const [file, setFile] = useState('');
@@ -9,6 +11,7 @@ export default function Home() {
   const [uploadedFile, setUploadedFile] = useState({});
   const [message, setMessage] = useState('');
   const [uploadPercentage, setUploadPercentage] = useState(0);
+
 
   const onChange = e => {
     setFile(e.target.files[0]);
